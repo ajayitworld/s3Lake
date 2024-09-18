@@ -2,6 +2,7 @@ import subprocess
 import json
 
 def run(cmd, token):
+    cmd = cmd + ';'
     print(cmd)
     cmd=cmd.replace('\n',' ')
     result = subprocess.run(["upsolver", "execute", "-t", token, "-c", cmd],
